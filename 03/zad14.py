@@ -18,6 +18,6 @@ X2 = X2_rv.rvs(1000)
 plt.scatter(X[:, 0], X[:, 1], label="Sample")
 x, y = np.mgrid[-10:10:0.1, -10:10:0.1]
 pos = np.dstack((x, y))
-plt.contour(x, y, X2_rv.pdf(pos), levels=10, colors="r", label="Normal Distribution")
+plt.contourf(x, y, X2_rv.pdf(pos), levels=10, colors="r", label="Normal Distribution")
 plt.legend()
 plt.show()
